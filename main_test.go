@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestParseCSV(t *testing.T) {
 	a := assert.New(t)
 	students := parseCSV("grades.csv")
-
 	a.Equal(30, len(students), "Student list size should be 30")
 
 	fs := student{"Kaylen", "Johnson", "Duke University", 52, 47, 35, 38}
